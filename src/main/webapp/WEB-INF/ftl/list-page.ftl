@@ -19,14 +19,17 @@
     <h2>Files in Upload Directory</h2>
 
     <body>
-        <div>
-            <div><b>Uploaded files:</b></div>
-            <#list files as file>
-                <div>
+        <#if hasFiles >
+            <div>
+                <#list files as file>
+                    <div>
                     ${file.getName()}
-                </div>
-            </#list>
-        </div>
+                    </div>
+                </#list>
+            </div>
+        <#else>
+            <p style="color: red;">No files found in upload directory</p>
+        </#if>
     </body>
 
     <u>

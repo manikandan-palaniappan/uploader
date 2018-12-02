@@ -40,8 +40,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
 
-        System.out.println("Login Username " +loginUsername);
-        System.out.println("Login Password " +loginPassword);
         authenticationMgr.inMemoryAuthentication()
             .withUser(loginUsername).password(loginPassword).authorities("ROLE_USER", "ROLE_ADMIN");
     }

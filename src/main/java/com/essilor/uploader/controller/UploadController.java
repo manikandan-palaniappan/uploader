@@ -17,7 +17,6 @@ import java.io.IOException;
 
 @Controller
 public class UploadController {
-    // public static final String uploadingdir = System.getProperty("user.dir") + "/uploadingdir/";
 
     @Value("${upload.path}")
     public String uploadPath;
@@ -29,8 +28,16 @@ public class UploadController {
 
     @RequestMapping("/list")
     public String listFilesInDir(Model model) {
+
+        Boolean hasFiles = false;
         File file = new File(uploadPath);
-        model.addAttribute("files", file.listFiles());
+        File[] files = file.listFiles();
+        if(files.length > 0 ) {
+            model.addAttribute("files", files);
+            hasFiles=true;
+        }
+        model.addAttribute("hasFiles", hasFiles);
+
         return "list-page";
     }
 

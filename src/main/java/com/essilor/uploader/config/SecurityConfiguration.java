@@ -1,6 +1,7 @@
 package com.essilor.uploader.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,6 +12,12 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Value("${login.username}")
+    public String loginUsername;
+
+    @Value("${login.password}")
+    public String loginPassword;
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -32,8 +39,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder authenticationMgr) throws Exception {
+
+        System.out.println("Login Username " +loginUsername);
+        System.out.println("Login Password " +loginPassword);
         authenticationMgr.inMemoryAuthentication()
-            .withUser("admin").password("admin").authorities("ROLE_USER", "ROLE_ADMIN");
+            .withUser(loginUsername).password(loginPassword).authorities("ROLE_USER", "ROLE_ADMIN");
     }
 
 }

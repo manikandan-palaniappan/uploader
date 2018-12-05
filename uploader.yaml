@@ -1,0 +1,15 @@
+multipart:
+  max-file-size: 1024MB
+  max-request-size: 1024MB
+
+upload:
+  path: D:/Essilor/Temporaries/uploadingdir/
+# upload.path=/data1/uploadingdir
+
+login:
+  username: admin
+  password: admin123
+
+server:
+  context-path: /uploader
+  port: 9090

@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <div class="w3-container w3-teal">
-	<h1>Uploader</h1>
+	<h1>UPLOADER</h1>
 </div>
 <body class="w3-light-grey">
 
@@ -17,13 +17,13 @@
 		<form id="logoutForm" method="POST" action="/uploader/logout">
 		</form>
 	</div>
-	<h3>Hello User</h3>
+	<h3>Hello <#if username ??>${username}!</#if></h3>
 	<p>
 		<a class="w3-button w3-section w3-teal w3-ripple w3-hover-green" href="/uploader/upload">Upload Files</a>
 	</p>
 
 	<div class="w3-container w3-teal w3-bottom">
-		<p>Spring boot application!!!!</p>
+		<p>Spring boot application!!!</p>
 	</div>
 </body>
 </html>

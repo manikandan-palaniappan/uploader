@@ -8,7 +8,7 @@
     </head>
 
     <div class="w3-container w3-teal">
-        <h1>Uploader</h1>
+        <h1>UPLOADER</h1>
     </div>
 
     <div class="w3-bar w3-cyan">
@@ -42,7 +42,7 @@
         </p>
 
         <div class="w3-container w3-teal w3-bottom">
-            <p>Spring boot application!!!!</p>
+            <p>Spring boot application!!!</p>
         </div>
 
     </body>

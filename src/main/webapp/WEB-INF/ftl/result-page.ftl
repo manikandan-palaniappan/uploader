@@ -28,7 +28,7 @@
             </div>
         <#else>
             <div>
-                <div>Files uploaded successfully:</div>
+                <div><b>Files uploaded successfully:</b></div>
                 <#list filesUploaded as file>
                 <div>
                     ${file}
@@ -42,7 +42,7 @@
         </p>
 
         <div class="w3-container w3-teal w3-bottom">
-            <p>Spring boot application!!!</p>
+            <p>Essilor</p>
         </div>
 
     </body>

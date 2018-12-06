@@ -36,7 +36,7 @@
                 total size: <span id="fileSize">0</span>;
             </p>
             <p>
-                <input class="w3-button w3-teal w3-hover-green w3-ripple" type="submit" value="Upload">
+                <input id="uploadButton" class="w3-button w3-teal w3-hover-green w3-ripple" type="submit" value="Upload">
             </p>
 
         </form>
@@ -87,6 +87,7 @@
                 if (nBytes > 0) {
                     document.getElementById("uploadInProcessMsg").innerText = "Upload in Progress....... Please Wait";
                     document.getElementById("uploadingDiv").style.display="block";
+                    document.getElementById("uploadButton").disabled = true;
                     return true;
                 } else {
                     document.getElementById('errorMsg').innerHTML = "Error!!! Select atleast one file to upload";
@@ -97,7 +98,7 @@
         </script>
 
         <div class="w3-container w3-teal w3-bottom">
-            <p>Spring boot application!!!</p>
+            <p>Essilor</p>
         </div>
     </body>
 </html>

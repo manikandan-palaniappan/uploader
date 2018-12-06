@@ -23,7 +23,7 @@
 	</p>
 
 	<div class="w3-container w3-teal w3-bottom">
-		<p>Spring boot application!!!</p>
+		<p>Essilor</p>
 	</div>
 </body>
 </html>

@@ -1,22 +1,29 @@
 <html>
 <head>
 	<title>Welcome</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-	<div style="border: 1px solid #ccc; padding: 5px; margin-bottom: 20px;">
+<div class="w3-container w3-teal">
+	<h1>Uploader</h1>
+</div>
+<body class="w3-light-grey">
 
-		Home |
-		<a href="/uploader/list">List Files</a> |
-		<u> <a onclick="document.forms['logoutForm'].submit()">Logout</a> </u> |
-
+	<div class="w3-bar w3-cyan">
+		<a class="w3-bar-item w3-button w3-dark-grey">Home</a>
+		<a href="/uploader/list" class="w3-bar-item w3-hover-green w3-button">List Files</a>
+		<u><a onclick="document.forms['logoutForm'].submit()" class="w3-bar-item w3-hover-green w3-button w3-right">Logout</a> </u>
 		<form id="logoutForm" method="POST" action="/uploader/logout">
 		</form>
-
 	</div>
 	<h3>Hello User</h3>
-	<u>
-		<h2 style="color: green;">
-		<a href="/uploader/upload">Upload files</a></h3>
-	</u>
+	<p>
+		<a class="w3-button w3-section w3-teal w3-ripple w3-hover-green" href="/uploader/upload">Upload Files</a>
+	</p>
+
+	<div class="w3-container w3-teal w3-bottom">
+		<p>Spring boot application!!!!</p>
+	</div>
 </body>
 </html>

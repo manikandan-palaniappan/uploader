@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Files List</title>
     </head>
 
-    <div style="border: 1px solid #ccc; padding: 5px; margin-bottom: 20px;">
-
-    	<a href="/uploader/home">Home</a> |
-        List Files |
-    	<u> <a onclick="document.forms['logoutForm'].submit()">Logout</a> </u> |
-
-    	<form id="logoutForm" method="POST" action="/uploader/logout">
-    	</form>
-
+    <div class="w3-container w3-teal">
+        <h1>Uploader</h1>
     </div>
 
-    <h2>Files in Upload Directory</h2>
+    <div class="w3-bar w3-cyan">
+        <a href="/uploader/home" class="w3-bar-item w3-hover-green w3-button">Home</a>
+        <a class="w3-bar-item w3-button w3-dark-grey">List Files</a>
+        <u><a onclick="document.forms['logoutForm'].submit()" class="w3-bar-item w3-hover-green w3-button w3-right">Logout</a> </u>
+        <form id="logoutForm" method="POST" action="/uploader/logout">
+        </form>
+    </div>
 
-    <body>
+    <h3>Files in Upload Directory</h3>
+
+    <body class="w3-light-grey">
         <#if hasFiles >
             <div>
                 <#list files as file>
@@ -28,12 +31,18 @@
                 </#list>
             </div>
         <#else>
-            <p style="color: red;">No files found in upload directory</p>
+        <div class="w3-panel w3-round-xlarge w3-yellow">
+            <span>No files found in upload directory</span>
+        </div>
         </#if>
-    </body>
 
-    <u>
-  		<h2 style="color: green;">
-        <a href="/uploader/upload">Upload files</a></h3>
-  	</u>
+        <p>
+            <a class="w3-button w3-section w3-teal w3-ripple w3-hover-green" href="/uploader/upload">Upload More Files</a>
+        </p>
+
+        <div class="w3-container w3-teal w3-bottom">
+            <p>Spring boot application!!!!</p>
+        </div>
+
+    </body>
 </html>

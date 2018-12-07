@@ -8,7 +8,7 @@
     </head>
 
     <div class="w3-container w3-teal">
-        <h1>UPLOADER</h1>
+        <h1>KITTING FILE UPLOADER</h1>
     </div>
 
     <div class="w3-bar w3-cyan">
